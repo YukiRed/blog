@@ -10,8 +10,13 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  build:
+    name: Build with Astro & Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -35,8 +40,13 @@ jobs:
       - name: 🔨 Build site
         run: pnpm run build
 
-      - name: 🚀 Deploy to GitHub Pages
-        uses: withastro/action@v0
+      - name: 📄 Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: 🚀 Upload site artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-dir: dist
+          path: ./dist
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
