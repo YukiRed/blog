@@ -117,6 +117,7 @@ const sitemapOption: SitemapOptions = {
 
 // https://astro.build/config
 export default defineConfig({
+  base: '/blog/',
   site: SITE.website,
   integrations: [
     sitemap(sitemapOption),
