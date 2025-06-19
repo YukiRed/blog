@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://yukired.github.io/blog", // replace this with your deployed domain, e.g. https://ziteh.github.io/
+  website: "https://yukired.github.io/", // replace this with your deployed domain, e.g. https://ziteh.github.io/
   author: "YukiRed", // 君の名は ~
   profile: "https://github.com/YukiRed",
   desc: "A blog of thoughts, explorations, and creative reflections.",
