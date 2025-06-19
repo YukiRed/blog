@@ -19,6 +19,10 @@ jobs:
     name: Build with Astro & Deploy
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [20]
+
     steps:
       - name: 🧾 Checkout repository
         uses: actions/checkout@v4
@@ -28,13 +32,13 @@ jobs:
         with:
           version: 10
 
-      - name: 🔧 Setup Node.js
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: pnpm
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
 
-      - name: 📥 Install dependencies
+      - name: "📦 Install dependencies"
         run: pnpm install
 
       - name: 🔨 Build site
@@ -44,9 +48,9 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: 🚀 Upload site artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
       - name: 🚀 Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
