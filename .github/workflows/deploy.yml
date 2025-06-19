@@ -39,10 +39,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
 
       - name: "📦 Install dependencies"
-        run: pnpm install
+        run: pnpm install --prefer-fresh
 
       - name: 🔨 Build site
         run: pnpm run build
