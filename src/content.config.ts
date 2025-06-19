@@ -24,7 +24,7 @@ const blog = defineCollection({
       draft: z.boolean().optional(),
       hideEditPost: z.boolean().optional(),
       toc: z.boolean().default(true),
-      comments: z.boolean().default(false),
+      comments: z.boolean().default(true),
       math: z.boolean().default(false),
 
       canonicalURL: z.string().optional(),

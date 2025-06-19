@@ -1,9 +1,9 @@
 export const SITE = {
-  website: "https://astro-paper-s.ziteh.dev", // replace this with your deployed domain, e.g. https://ziteh.github.io/
-  author: "ZiTe", // 君の名は ~
-  profile: "https://github.com/ziteh",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme. A fork of AstroPaper theme",
-  title: "AstroPaper-S",
+  website: "https://yukired.github.io/blog", // replace this with your deployed domain, e.g. https://ziteh.github.io/
+  author: "YukiRed", // 君の名は ~
+  profile: "https://github.com/YukiRed",
+  desc: "A blog of thoughts, explorations, and creative reflections.",
+  title: "Digital Notes",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -18,11 +18,11 @@ export const SITE = {
   editPost: {
     enabled: false,
     text: "Suggest Changes",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
+    url: "https://github.com/YukiRed/blog/edit/main/",
   },
   dynamicOgImage: true,
   lang: "en", // html lang code. Set this empty and default will be "en"
   langOg: "en_US", // Open Graph locale tag, format 'language_TERRITORY' https://ogp.me/#optional
-  timezone: "Asia/Taipei", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: "Asia/Kuching", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   wontonCommentUrl: "", // Wonton comment server URL, set to empty string to disable comment
 } as const;

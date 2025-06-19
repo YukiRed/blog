@@ -48,16 +48,16 @@ Here are the `SITE` configuration options defined in `src/config.ts`.
 
 ### Disqus
 
-To use Disqus, replace `YOUR_SHORTNAME` in `/src/components/DisqusComment.astro`:
+To use Disqus, replace `dliew` in `/src/components/DisqusComment.astro`:
 
-```js //(YOUR_SHORTNAME)/
+```js //(dliew)/
 // file: src/components/DisqusComment.astro
 (function () {
   const d = document,
     s = d.createElement("script");
 
-  // Replace YOUR_SHORTNAME with your Disqus shortname
-  s.src = "https://YOUR_SHORTNAME.disqus.com/embed.js";
+  // Replace dliew with your Disqus shortname
+  s.src = "https://dliew.disqus.disqus.com/embed.js";
   s.setAttribute("data-timestamp", String(+new Date()));
   (d.head || d.body).appendChild(s);
 })();
