@@ -21,7 +21,10 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20]
+        node-version: [22]
+
+    environment:
+      name: github-pages
 
     steps:
       - name: 🧾 Checkout repository
